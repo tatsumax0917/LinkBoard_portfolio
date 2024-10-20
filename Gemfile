@@ -10,6 +10,7 @@ gem "sprockets-rails"
 
 # Use postgresql as the database for Active Record
 # gem "pg", "~> 1.1"
+gem "sqlite3", "~> 1.4"
 
 # Use the Puma web server [https://github.com/puma/puma]
 gem "puma", ">= 5.0"
@@ -72,7 +73,7 @@ group :test do
 end
 
 group :production do
-  gem "pg", "1.3.5"
+  # gem "pg", "1.3.5"
   # gem "aws-sdk-s3", "1.157", require: false
   gem "aws-sdk-s3"
 
@@ -117,4 +118,4 @@ gem 'meta-tags'
 # gem 'recaptcha',  require: "recaptcha/rails"
 
 # ジョブ
-gem 'whenever', require: false
+# gem 'whenever', require: false

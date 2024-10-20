@@ -2,12 +2,12 @@ FROM ruby:3.2.4
 
 RUN apt-get update -qq && apt-get install -y \
   build-essential \
-  libpq-dev \
+  # libpq-dev \
   nodejs \
   npm \
   vim \
   # cron \
-  postgresql-client \
+  # postgresql-client \
   sudo
 
 RUN npm install -g npm@latest

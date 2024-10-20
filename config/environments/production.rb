@@ -131,8 +131,8 @@ Rails.application.configure do
   # ==================
   #   ホストの設定
   # ==================
-  config.hosts << 'link-board.onrender.com'
-  config.hosts << 'www.link-board.com'
-  config.hosts << 'link-board.com'
+  # config.hosts << 'link-board.onrender.com'
+  # config.hosts << 'www.link-board.com'
+  # config.hosts << 'link-board.com'
 
 end
