@@ -1,0 +1,16 @@
+<main class="main confirmations">
+
+  <div class="row">
+    <div class="col-11 col-md-8 mx-auto">
+      <%= simple_form_for(resource, as: resource_name, url: confirmation_path(resource_name), html: { method: :post }) do |f| %>
+        <div class="field">
+          <%= f.input :email, wrapper: :floating_labels_form, placeholder: '', value: (resource.pending_reconfirmation? ? resource.unconfirmed_email : resource.email) %>
+        </div>
+        <div class="actions">
+          <%= f.submit "アカウント有効化のメールを再送", class: 'form-control btn btn-primary' %>
+        </div>
+      <% end %>
+      <p class="mail_cation">※ アカウント有効化のメールが届きますが、迷惑メールフォルダに振り分けられる可能性もありますのでそちらもご確認ください。</p>
+    </div>
+  </div>
+</main>

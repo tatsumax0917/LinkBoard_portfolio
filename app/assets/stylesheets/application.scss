@@ -1,0 +1,61 @@
+// bootstrap
+@import 'bootstrap';
+@import url('https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css');
+
+// google fonts
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100..900&display=swap');
+
+// Cropper
+@import url("https://cdn.jsdelivr.net/npm/cropperjs@1.6.2/dist/cropper.min.css");
+
+// reset
+@import 'reset';
+
+// project base
+@import 'base';
+
+// variables
+@import 'variables';
+
+// mixin
+@import 'mixin';
+
+// shared
+@import 'header';
+@import 'footer';
+@import 'unique_parts';
+
+// home
+@import 'home/top';
+@import 'users/change_email';
+@import 'users/change_password';
+
+// contacts
+@import 'contacts/contact';
+
+// devise
+@import 'devise/registrations';
+@import 'devise/sessions';
+@import 'devise/confirmations';
+@import 'devise/password';
+
+// errors 
+@import 'errors/errors';
+
+// mypage
+@import 'users/mypage';
+
+// search
+@import 'users/index';
+
+// component
+@import 'component';
+
+// simple_form
+@import 'simple_form/form';
+
+// image_upload
+@import 'image_uploader/cropper';
+
+// パスワードを忘れた場合
+@import 'password_forget';

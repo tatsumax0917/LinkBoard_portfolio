@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <style>
+      /* Email styles need to be inline */
+    </style>
+  </head>
+
+  <body>
+    <p>LinkBoardをご利用いただき、誠にありがとうございます。</p>
+
+    <%= yield %>
+    
+    <p>※ 本メールは送信専用のメールアドレスより自動送信にてお送りしておりますので、
+    こちらのアドレスへの返信はできません。ご了承ください。</p>
+    <p>このメールに心当たりがない場合は削除してください。</p>
+    ────────────────────
+    <div>
+      <p>LinkBoard</p>
+      HP: <a href="https://link-board.com">https://link-board.com</a><br>
+      Email: <a href="support@link-board.com">support@link-board.com</a>
+      <p>© LinkBoard ALL Rights Reserved.</p>
+    </div>
+  </body>
+</html>

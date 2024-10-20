@@ -1,0 +1,5 @@
+<% if object.errors.any? %>
+  <div class="custom_error">
+    <%= object.errors.full_messages_for(attribute)[0] %>
+  </div>
+<% end %>

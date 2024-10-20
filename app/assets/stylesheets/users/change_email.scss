@@ -1,0 +1,15 @@
+// =============================
+// 　レスポンシブ
+// =============================
+@include tablet-and-up {
+  .change_email {
+    & .field {
+      @include form-responsive;
+      
+    }
+    & .actions {
+      @include form-responsive;
+      margin-top: 50px;
+    }
+  }
+}

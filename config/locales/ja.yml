@@ -1,0 +1,65 @@
+ja:
+  users:
+    change_password:
+      success: 'パスワードが変更されました'
+      no_password: 'を入力してください'
+      invalid_characters: "はアルファベット（大文字・小文字）と数字のみ使用可能です"
+      include_space: "には空白を含めることはできません"
+  activerecord:
+    models:
+      user: ユーザー
+    attributes:
+      user:
+        unique_user_id: ID
+        name: ユーザー名
+        email: メールアドレス
+        password: パスワード
+        text: フリーテキスト
+        current_password: 現在のパスワード
+        image: 画像
+      link:
+        link_name: リンク名
+        link_url: URL
+      contact:
+        name: 名前
+        email: メールアドレス
+        message: お問い合わせ内容
+    errors:
+      models:
+        user:
+          attributes:
+            unique_user_id:
+              blank: "を入力してください"
+              taken: "は既に使用されています"
+              too_short: "を%{count}文字以上で入力してください"
+              too_long: "を%{count}文字以下で入力してください"
+            name:
+              blank: "を入力してください"
+              too_short: "を%{count}文字以上で入力してください"
+              too_long: "を%{count}文字以下で入力してください"
+            email: 
+              blank: "を入力してください"
+              invalid: "正しい形式で入力してください"
+            password:
+              # blank: "を入力してください"
+              too_short: "を%{count}文字以上で入力してください"
+              too_long: "を%{count}文字以下で入力してください"
+            current_password:
+              blank: 'を入力してください'
+              invalid: 'が違います'
+        contact:
+          attributes:
+            name: "を入力してください"
+            email: "を入力してください"
+            message: "を入力してください"
+  views:
+      pagination:
+        first: '最初'
+        last: '最後'
+        previous: '<'
+        next: '>'
+        truncate: '...'          
+  errors:
+    messages:
+      record_invalid: "保存失敗"
+      not_saved: "保存失敗"

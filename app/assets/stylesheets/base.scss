@@ -1,0 +1,48 @@
+// base
+
+html {
+  font-size: 16px;
+  color: var(--gray-color);
+  scroll-padding-top: 100px;
+
+}
+
+body {
+  font-family: "Noto Sans JP", sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+}
+
+.main__heading {
+  color: var(--gray-color);
+  text-align: center;
+  font-weight: bold;
+  font-size: 20px;
+  margin-bottom: 35px;
+}
+
+
+// ====================================
+//   各種ページ
+// ====================================
+.main {
+  text-align: center;
+
+  padding-top: 50px;
+  margin-top: 50px;
+  .row {
+    margin: 0 auto 80px;
+    width: 100%;
+    .actions {
+      margin-top: 20px;
+      input {
+        padding: 10px;
+        font-size: 0.8rem;
+      }
+    }
+  }
+}
+
+.logo-yellow {
+  color: var(--yellow-color);
+}

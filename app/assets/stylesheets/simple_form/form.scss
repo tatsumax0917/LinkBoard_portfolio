@@ -1,0 +1,85 @@
+.field {
+  label {
+    color: var(--light-gray-color);
+  }
+}
+
+// === formのフォーカス時などの各種色設定 ===
+// 有効なフォームの状態
+input[type="text"]:valid,
+input[type="email"]:valid,
+input[type="url"]:valid,
+input[type="file"]:valid {
+  background-image: none;
+  border-color: #dee2e6
+}
+input[type="text"]:valid,
+
+.user-edit {
+  input.form-control.is-valid {
+    background-image: none;
+    border-color: #dee2e6;
+  }
+  textarea.form-control.is-valid {
+    background-image: none;
+    border-color: #dee2e6;
+  }
+}
+
+.sign-in {
+  input.form-control.is-valid {
+    background-image: none;
+    border-color: #dee2e6;
+  }
+}
+
+// エラー時の状態
+input.form-control.is-invalid {
+  border-color: #dc3545;
+}
+.change_email {
+  input.form-control.is-valid {
+    background-image: none;
+    border-color: #dee2e6;
+  }
+}
+// フォーカス時
+input.form-control.is-valid:focus {
+  border-color: var(--yellow-color);
+  outline: none;
+  box-shadow: 0 0 5px 2px  var(--yellow-color);
+}
+textarea.form-control.is-valid:focus {
+  border-color: var(--yellow-color);
+  outline: none;
+  box-shadow: 0 0 5px 2px  var(--yellow-color);
+}
+input.form-control:focus {
+  border-color: var(--yellow-color);
+  outline: none;
+  box-shadow: 0 0 5px 2px  var(--yellow-color);
+}
+textarea.form-control:focus {
+  border-color: var(--yellow-color);
+  outline: none;
+  box-shadow: 0 0 5px 2px  var(--yellow-color);
+}
+
+// 必須項目マークの削除
+abbr{ display: none;}
+
+// error
+.custom_error {
+  color: var(--bs-form-invalid-color);
+  font-size: 0.875rem;
+  margin-top: -10px;
+}
+
+// フローティングラベルのラベル
+.form-floating > .form-control:focus ~ label::after,
+.form-floating > .form-control:not(:placeholder-shown) ~ label::after,
+.form-floating > .form-control:not(:empty) ~ label::after,
+.form-floating > .form-control-plaintext ~ label::after,
+.form-floating > .form-select ~ label::after  {
+  background-color: transparent;
+}

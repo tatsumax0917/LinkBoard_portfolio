@@ -1,0 +1,32 @@
+:root {
+  --footer-color: #161616;
+  --header-color: #424242;
+  --yellow-color: #FFCB3C;
+  --blue-color: #0782F3;
+  --light-gray-color: #aaa9a9;
+  --gray-color: #7f7f7f;
+  --blue-link-color: #004cce;
+  --pink-color: #db5bac;
+}
+
+.font-yellow {
+  color: var(--yellow-color);
+}
+.font-blue {
+  color: var(--blue-color);
+}
+
+.mail_cation {
+  color: rgb(196, 0, 0);
+  font-size: 0.875rem;
+  text-align: center;
+  margin: 0 auto;
+  margin-top: 30px;
+  width: 80%;
+  max-width: 550px;
+}
+
+.title_design {
+  border-left: solid 8px var(--yellow-color);
+  padding-left: 10px;
+}

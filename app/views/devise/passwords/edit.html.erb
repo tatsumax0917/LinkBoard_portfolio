@@ -1,0 +1,23 @@
+<main class="main change_password">
+  <div class="row">
+    <div class="col-11 col-md-8 mx-auto">
+      <%= simple_form_for(resource, as: resource_name, url: password_path(resource_name), html: { method: :put }) do |f| %>
+      <%= f.hidden_field :reset_password_token %>
+
+      <div class="field">
+        <%= f.input :password, label: '新しいパスワード', wrapper: :floating_labels_form, placeholder: '', value: (resource.pending_reconfirmation? ? resource.unconfirmed_email : resource.email) %>
+      </div>
+
+      <div class="field">
+        <%= f.input :password_confirmation, label: '新しいパスワード（確認用）', wrapper: :floating_labels_form, placeholder: '', value: (resource.pending_reconfirmation? ? resource.unconfirmed_email : resource.email) %>
+      </div>
+      
+
+      <div class="actions">
+        <%= f.submit "パスワードを変更する", class: 'form-control btn btn-primary' %>
+      </div>
+    <% end %>
+
+    </div>
+  </div>
+</main>

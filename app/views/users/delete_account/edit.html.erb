@@ -1,0 +1,24 @@
+<main class="main user-delete">
+
+<div class="row">
+  <div class="col-11 col-md-8 mx-auto">
+    <h2 class="user-delete__title main__heading">アカウント削除の確認</h2>
+    <div class="user-delete__description">
+      <p>当サービスをご利用頂きありがとうございます。</p>
+      <p>本当にアカウントを削除しますか？</p>
+    </div>
+        
+    <%= simple_form_for(@user, url: delete_account_path, method: :delete, data: { turbo_method: :delete, turbo_confirm: '削除しますか？' }) do |f| %>
+      <div class="field edit-auth">
+        <%= f.input :current_password, label: '現在のパスワード', wrapper: :floating_labels_form, placeholder: '' %>
+      </div> 
+      <div class="actions">
+        <%= f.submit "削除する", class: 'form-control btn btn-danger' %>
+      </div>
+    <% end %>
+    <div class="actions back">
+      <%= link_to "戻る", :back, class: 'cancel-btn form-control btn btn-secondary'%>
+    </div>
+    </div>
+  </div>
+</main>

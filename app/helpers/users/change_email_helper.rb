@@ -1,0 +1,2 @@
+module Users::ChangeEmailHelper
+end

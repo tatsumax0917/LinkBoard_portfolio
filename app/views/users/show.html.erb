@@ -1,0 +1,60 @@
+<main class="main mypage">
+<div class="row">
+  <div class="col-11 col-md-8 mx-auto">
+    
+    <%= render 'shared/flash', attribute: 'mypage__flash'%>
+    
+    <div class="user-info">
+      <% if @user.image.attached? %>
+        <%= image_tag @user.resized_image, class: 'user-info__image' %>
+      <% else %>
+        <%= image_tag 'default_profile.png', class: 'user-info__image' %>
+      <% end %>
+      <div class="user-info__flex-box">
+        <p class="user-info__name"><%= @user.name %>
+        <% if @user.unique_user_id == 'linkboard' %>
+          <i class="admin-badge bi bi-shield-check"></i>
+        <% end %>
+        </p>
+      </div>
+
+      <div class="user-info__flex-box">
+        <p class="user-info__unique-user-id">ID: <%= @user.unique_user_id %></p>
+        <button id="copy_url" class="no-style-btn user-info__copy-url"
+          data-controller="copy-profile-url"
+          data-action="click->copy-profile-url#copy"
+        >
+          <i class="bi bi-files"></i>
+        </button>
+      </div>
+      <p class="user-info__text">
+        <%= @user.text %>
+      </p>
+    </div>
+      
+    <!-- Link -->
+    <div class="my-link">
+      <ul class="my-link__list">
+        <% if @user.links.empty? || @user.links.all? { |link| link.link_name.blank? } %>
+          <% if current_user == @user %>      
+            <%= link_to edit_user_registration_path, class: 'my-link__link' do %>
+              <li class='my-link__item'>リンクを設定する<li>
+            <% end %>
+          <% end %>
+        <% else %>
+          <% @user.links.order(:link_order).each do |link| %>
+            <% if link.link_name.present? && link.link_url.present? %>
+              <%= link_to link.link_url, class: 'my-link__link' do %>  
+                <li class="my-link__item"><%= link.link_name %></li>
+              <% end %>
+            <% end %>
+          <% end %>
+        <% end %>
+
+      </div>
+    </div>
+
+  </div>
+</div>
+  
+</main>

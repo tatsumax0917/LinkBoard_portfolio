@@ -1,0 +1,64 @@
+// =============================
+// 　Sign in
+// =============================
+.sign-in {
+  &__title {
+    font-size: 1.2rem;
+    margin-bottom: 35px;
+  }
+
+  // error (flash)
+  &__flash {
+    height: 88px;
+  }
+
+  // form
+  & .field {
+    margin-top: 20px;
+    font-weight: normal;
+    height: 88px;
+
+    & input::placeholder {
+      font-size: 0.75rem;
+      color: var(--light-gray-color);
+    }
+  }
+  & .remember_me {
+    height: auto;
+    text-align: center;
+    margin-top: 0;
+  }
+
+  & .login_help {
+    color: rgb(40, 151, 77);
+    font-size: 0.7rem;
+    margin-top: 30px;
+    text-align: left;
+
+    & i {
+      margin-right: 5px;
+    } 
+    & .auth-mail_resend, .forget_password {
+      display: inline-block;
+      margin-top: 10px;
+    }
+  }
+}
+
+// =============================
+// 　レスポンシブ
+// =============================
+@include tablet-and-up {
+  .sign-in {
+    .field {
+      @include form-responsive;
+    }
+    .actions {
+      @include form-responsive;
+    }
+    .login_help {
+      @include form-responsive;
+      margin-top: 30px;
+    }
+  }
+}

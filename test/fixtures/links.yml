@@ -1,0 +1,54 @@
+# # Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+# link1:
+#   link_name: Link1
+#   link_url: http://example.com
+#   link_order: 1
+#   user: valid_user
+
+# link2:
+#   link_name: Link2
+#   link_url: http://example.com
+#   link_order: 2
+#   user: valid_user
+
+
+# link3:
+#   link_name: Link3
+#   link_url: http://example.com
+#   link_order: 3
+#   user: valid_user
+
+
+# link4:
+#   link_name: Link4
+#   link_url: http://example.com
+#   link_order: 4
+#   user: valid_user
+
+
+# link5:
+#   link_name: Link5
+#   link_url: http://example.com
+#   link_order: 5
+#   user: valid_user
+
+# link6:
+#   link_name: Link6
+#   link_url: http://example.com
+#   link_order: 6
+#   user: valid_user
+
+
+# link7:
+#   link_name: Link7
+#   link_url: http://example.com
+#   link_order: 7
+#   user: valid_user
+
+
+# link8:
+#   link_name: Link8
+#   link_url: http://example.com
+#   link_order: 8
+#   user: valid_user

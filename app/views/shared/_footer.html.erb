@@ -1,0 +1,39 @@
+<footer class="footer">
+  <div class="footer__wrapper">
+    <h2 class="footer__logo"><span class="logo-yellow">L</span>ink Board</h2>
+    <div class="footer-nav">
+      <div class="footer-nav__menu">
+        <h3 class="footer-nav__title">Menu</h3>
+        <ul class="footer-nav__list">
+          <li class="footer-nav__item">
+            <%= link_to '新規登録', new_user_registration_path %>
+          </li>
+          <li class="footer-nav__item">
+            <%= link_to 'ログイン', new_user_session_path %>
+          </li>
+          <li class="footer-nav__item">
+            <%= link_to '検索', users_path %>
+          </li>
+          <li class="footer-nav__item">
+            <%= link_to 'サービス内容', '#service' %>
+          </li>
+          <li class="footer-nav__item">
+            <%= link_to 'ご利用例', '#use-cases' %>
+          </li>
+          <li class="footer-nav__item">
+            <%= link_to 'よくある質問', help_path %>
+          </li>
+        </ul>
+      </div>
+      
+      <div class="footer__developer">
+        <h3 class="footer-nav__title">Developer</h3>
+        <ul class="footer-nav__list">
+          <li class="footer-nav__item"><%= link_to '開発者情報',  'https://link-board.com/tatsumax' %></li>
+          <li class="footer-nav__item"><%= link_to '運営者情報',  'https://link-board.com/linkboard' %></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <small class="footer__copyright">© 2024 Link Board</small>
+</footer>

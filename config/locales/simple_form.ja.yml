@@ -1,0 +1,34 @@
+ja: 
+  helpers:
+    submit:
+        create: ログイン
+        update: 更新
+        submit: サブミット
+        new: 新規登録
+  simple_form:
+    labels:
+      user:
+        unique_user_id: ID
+        name: ユーザー名
+        email: メールアドレス
+        password: パスワード
+        text: フリーテキスト
+        current_password: 現在のパスワード
+      contact:
+        name: 名前
+        email: メールアドレス
+        message: お問い合わせ内容
+    # placeholders:
+    #   user:
+    #     unique_user_id: unique_user_id palceholder
+    #     name: name palceholder
+    #     email: email  palceholder
+    #     password: password palceholder
+    #     text: free-tet palceholder
+    #     current_password: current-password palceholder
+    # hints:
+    #   user:
+    #     unique_user_id: 'ユーザ名を入力してください'
+    #     password: '年齢を入力してください'
+
+        

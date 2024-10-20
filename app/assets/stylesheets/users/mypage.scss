@@ -1,0 +1,97 @@
+.mypage {
+  padding-top: 30px;
+  
+  &__flash {
+    font-size: 1rem;
+  }
+}
+.user-info {
+  &__image {
+    margin: 0 auto;
+    max-width: 200px;
+    min-width: 100px;
+    width: 50%;
+    border-radius: 50%;
+    margin-top: 20px;
+  }
+
+  &__name {
+    font-size: 1.2rem;
+  }
+
+  &__flex-box {
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+    align-items: center;
+  }
+  
+  &__copy-url {
+    color: #929292;
+    margin-left: 10px;
+  }
+
+  &__unique-user-id {
+    font-size: 0.875rem;
+    color: #929292;
+  }
+  
+  &__text {
+    width: 80%;
+    max-width: 400px;
+    margin: 30px auto;
+  }
+
+  &__edit-btn {
+    width: 100px;
+    margin-top: 20px;
+  }
+}
+
+// ===============
+//  Link
+// ===============
+.my-link {
+  font-weight: bold;
+ 
+  &__list {
+    padding: 30px 0 0 0; 
+  }
+ 
+  &__item {
+    color: rgb(114, 114, 114);
+    border: 1px solid rgba(153, 153, 153, 0.3);
+    border-radius: 20px;
+    margin: 0 auto 30px;
+    padding: 10px 0;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+  }
+}
+
+
+// URLコピーアイコンのデフォルトデザイン削除
+.no-style-btn {
+  background: none;
+  border: none;
+  padding: 0;
+  margin: 0;
+  outline: none;
+  box-shadow: none;
+  cursor: pointer;
+}
+button#copy_url {
+  margin-left: 8px;
+}
+
+
+
+// =============================
+// 　レスポンシブ
+// =============================
+@include tablet-and-up {
+  .my-link  {
+    &__item {
+      max-width: 550px;
+    }
+  }
+}

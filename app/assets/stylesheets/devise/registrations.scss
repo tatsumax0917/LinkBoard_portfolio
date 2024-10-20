@@ -1,0 +1,216 @@
+// ============================================
+// Shared (Sign Up, User Edit, User Delete)
+// ============================================
+
+.sign-up, .user-edit {
+  
+  // form
+  & .field {
+    margin-top: 20px;
+    font-weight: normal;
+    // height: 88px;
+    
+    & input::placeholder {
+      font-size: 0.75rem;
+      color: var(--light-gray-color);
+    }
+    textarea {
+      height: 120px;
+      &::placeholder {
+        font-size: 0.75rem;
+        color: var(--light-gray-color);
+      }
+    }
+  }
+  & .edit_auth_title {
+    margin-top: 50px;
+    text-align: left;
+  }
+}
+
+// =============================
+// User Edit
+// =============================
+.user-edit {
+  & .field {
+    text-align: left;
+    .id_edit_btn {
+      font-size: 0.75rem;
+      padding: 2px 10px;
+      margin: -10px 0 0 auto;
+      display: block;
+    }
+  }
+
+  &__discription {
+    font-size: 0.875rem;
+  }
+  & .actions {
+    margin-bottom: 50px;
+  }
+  &__delete-btn {
+    font-size: 0.7rem;
+    color: red;
+  }
+  
+  & .change_email {
+    // margin-top: 50px;
+    & a{
+      @include yellow_custom_btn;
+    }
+  }
+  
+  & .change_password {
+    & a{
+      @include yellow_custom_btn;
+    }
+  }
+}
+
+// ============================
+//  links
+// ============================
+.links {
+  &__title {
+    margin-top: 120px;
+    margin-bottom: 50px;
+  }
+
+  .generator {
+    &-url {
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      &__select {
+        width: 35%;
+      }
+      &__account {
+        width: 60%;
+        margin-left: 10px;
+      }
+      &__btn {
+        width: 100%;
+        margin-top: 10px;
+      }
+    }
+    
+    &-result {
+      display: flex;
+      flex-wrap: wrap;
+
+      &__url {
+        width: 100%;
+        text-align: center;
+        height: 70px;
+        line-height: 70px;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+      }
+      
+      &__copy {
+        width: 100%;
+      }
+    }
+  }
+
+  &__list {
+    margin-top: 30px;
+  }
+
+  &__item.field {
+    margin-top: 40px;
+    height: auto;
+  }
+
+  &__url {
+    margin-top: 20px;
+  }
+
+  &__item-header {
+    display: flex;
+    justify-content: flex-end;
+  }
+
+  &__order {
+    margin: 0 0 5px 5px;
+  }
+
+  &__paste-btn {
+    margin-right: 10px;
+    align-self: center;
+    cursor: pointer;
+    font-size: 0.875rem;
+  }
+  
+  &__clear-btn {
+    margin-right: 5px;
+    align-self: center;
+  }
+}
+
+
+// =============================
+// User Delete
+// =============================
+.user-delete {
+  &__description {
+    margin-bottom: 50px;
+  }
+  & .actions {
+    margin-bottom: 20px;
+    &.back {
+      margin-top: 0;
+    }
+  }
+}
+
+// =============================
+// 　レスポンシブ
+// =============================
+@include tablet-and-up {
+  .sign-up {
+    .field {
+      @include form-responsive;
+    }
+    .actions {
+      @include form-responsive;
+    }
+  }
+  
+  .user-delete {
+    .field {
+      @include form-responsive;
+    }
+    .actions {
+      @include form-responsive;
+      margin-bottom: 20px;
+    }
+  }
+  
+  .user-edit {
+    .field {
+      @include form-responsive;
+      margin-top: 20px
+    }
+    & .change_email {
+      margin-top: 20px;
+    }
+
+    .actions {
+      @include form-responsive;
+      margin-bottom: 40px;
+    }
+  }
+  
+  .generator {
+    &-url {
+      @include form-responsive;
+    }
+    
+    &-result {
+      @include form-responsive;
+    }
+  }
+}
+

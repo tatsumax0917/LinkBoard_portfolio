@@ -1,0 +1,42 @@
+<main class="main sign-in">
+  <div class="row">
+    <div class="col-11 col-md-8 mx-auto">
+      <%= render 'shared/flash', attribute: 'sign-in__flash'%>
+
+      <h2 class="sign-in__title main__heading">ログイン</h2>
+
+      <%= simple_form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+      <div class="field">
+        <%= f.input :email, wrapper: :floating_labels_form, placeholder: '' %>
+      </div> 
+
+      <div class="field">
+        <%= f.input :password, wrapper: :floating_labels_form, error: false,  placeholder: '' %>
+      </div>
+
+      <% if devise_mapping.rememberable? %>
+        <div class="field remember_me">
+          <%= f.check_box :remember_me %>
+          <%= f.label :remember_me, I18n.t("devise.sessions.user.new.remember_me") %>
+        </div>
+      <% end %>
+      
+      <div class="actions">
+        <%= f.button :submit, class: 'form-control btn btn-primary' %>
+      </div>
+      <% end %>
+      
+      <div class="login_help">
+        <p>
+          <i class="bi bi-question-circle"></i>
+          <%= link_to 'パスワードを忘れた場合', new_user_password_path, class: 'forget_password' %>
+        </p>
+        <p>
+          <i class="bi bi-question-circle"></i>
+          <%= link_to 'アカウント認証メールの再送', resend_confirmation_email_path, class: 'auth-mail_resend' %>
+        </p>
+      </div>
+
+    </div>
+  </div>
+</main>

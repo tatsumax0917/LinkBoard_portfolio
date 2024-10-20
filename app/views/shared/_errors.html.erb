@@ -1,0 +1,5 @@
+<% if object.errors.include?(attribute) %>
+  <div class="inline-alert text-danger" id="error_explanation" data-turbo-cache="false">
+    <%= object.errors.full_messages_for(attribute)[0] %>
+  </div>
+<% end %>

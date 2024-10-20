@@ -1,0 +1,7 @@
+# 正常ユーザー
+valid_user:
+  unique_user_id: "user_123"
+  name: "user"
+  email: "user@example.com"
+  text: <%= 'a' * 70 %>
+  # encrypted_password: <%= Devise::Encryptor.digest(User, 'password') %>

@@ -1,0 +1,27 @@
+.contact {
+  padding-top: 50px;
+  
+  & .field {
+    margin-bottom: 10px;
+  }
+  &__title {
+    font-size: 1.2rem;
+    margin-bottom: 40px;
+  }
+  & textarea.form-control {
+    height: 200px;
+  }
+}
+
+@include tablet-and-up {
+  .contact {
+    & .field {
+      @include form-responsive;
+      margin-bottom: 10px;
+    }
+    & .actions {
+      @include form-responsive;
+      margin-top: 50px;
+    }
+  }
+}

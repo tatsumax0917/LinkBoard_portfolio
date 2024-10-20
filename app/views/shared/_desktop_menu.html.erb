@@ -1,0 +1,72 @@
+<% if user_signed_in? %>
+<nav class="menu__desktop"><!-- ログインしている場合 -->
+  <!-- desktop -->
+  <ul class="menu__list--desktop">
+    <!-- ログインしている場合 -->
+    <li class="menu__item--desktop">
+        <%= form_with(url: users_path, method: :get, role: 'search', html: { class: 'menu__search-box' }) do %>
+          <%= text_field_tag :search_text, params[:search_text], id: 'search-text-desktop', class: 'menu__search-text', type: 'search', placeholder: 'ユーザー検索', autocomplete: 'off' %>
+          <button type="submit" class="menu__search-btn">
+            <i class="bi bi-search"></i>
+          </button>
+        <% end %>
+    </li>
+    <li class="menu__item--desktop">
+      <%= link_to user_profile_path(current_user.unique_user_id), class: 'menu__link' do %>
+        マイページ<i class="bi bi-chevron-right"></i>
+      <% end %>
+    </li>
+    <li class="menu__item--desktop">
+      <%= link_to edit_user_registration_path, class: 'menu__link' do %>
+        設定<i class="bi bi-chevron-right"></i>
+      <% end %>
+    </li>
+    <li class="menu__item--desktop">
+      <%= link_to help_path, class: 'menu__link' do %>
+        ヘルプ<i class="bi bi-chevron-right"></i>
+      <% end %>
+    </li>
+    <li class="menu__item--desktop">
+      <%= link_to contact_path, class: 'menu__link' do %>
+        お問合せ<i class="bi bi-chevron-right"></i>
+      <% end %>
+    </li>
+    <li class="menu__item--desktop">
+      <%= link_to destroy_user_session_path, data: { turbo_method: :delete, turbo_confirm: 'ログアウトしますか？'}, class: 'menu__link' do %>
+        ログアウト<i class="bi bi-chevron-right"></i>
+      <% end %>
+    </li>
+  </ul>
+</nav>
+<% else %>
+<!-- ログインしていない場合 -->
+<!-- desktop -->
+<nav class="menu__desktop">
+  <ul class="menu__list--desktop">
+    <li class="menu__item--desktop">
+      <%= form_with(url: users_path, method: :get, role: 'search', html: { class: 'menu__search-box' }) do %>
+        <%= text_field_tag :search_text, params[:search_text], id: 'search-text-desktop', class: 'menu__search-text', type: 'search', placeholder: 'ユーザー検索', autocomplete: 'off' %>
+        <button type="submit" class="menu__search-btn">
+          <i class="bi bi-search"></i>
+        </button>
+      <% end %>
+    </li>
+    
+    <li class="menu__item--desktop">
+      <%= link_to new_user_registration_path, class: 'menu__link' do %>
+        新規登録<i class="bi bi-chevron-right"></i>
+      <% end %>
+    </li>
+    <li class="menu__item--desktop">
+      <%= link_to new_user_session_path, class: 'menu__link' do %>
+        ログイン<i class="bi bi-chevron-right"></i>
+      <% end %>
+    </li>
+    <li class="menu__item--desktop">
+      <%= link_to help_path, class: 'menu__link' do %>
+        ヘルプ<i class="bi bi-chevron-right"></i>
+      <% end %>
+    </li>
+  </ul>
+</nav>
+<% end %>

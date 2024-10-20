@@ -1,0 +1,46 @@
+<main class="main help">
+  <div class="row">
+    <div class="col-11 col-md-8 mx-auto">
+      <section class="questions" id='questions'>
+        <h2 class="questions__title">よくあるご質問</h2>
+        <div class="questions__item">
+          <p class="questions__question">Q. 登録・利用に料金はかかりますか？</p>
+          <p class="questions__answer">A. 完全無料で登録利用できますので是非ご活用してください。</p>
+        </div>
+        <div class="questions__item">
+          <p class="questions__question">Q. どういった場面で使うの？</p>
+          <p class="questions__answer">A. SNSのプロフィール欄は文字数制限などがあるのでこのサービスのマイページのURL1つだけ記載すると便利でスッキリしたプロフィールになります。</p>
+        </div>
+        <div class="questions__item">
+          <p class="questions__question">Q. 新規登録後、ログインに失敗しました。</p>
+          <p class="questions__answer">A. 新規登録後はご自身のメールアドレスに届いたメールのリンクを押して本人確認をするとアカウントが有効化されて、ログインできるようになります。</p>
+        </div>
+        <div class="questions__item">
+          <p class="questions__question">Q. 間違ったメールアドレスで新規登録してしまったかもしれない。</p>
+          <p class="questions__answer">A. 一定期間アカウントが有効化されない場合は、数日で自動削除されるので、間違って新規作成したものは放置して、正しいアドレスでもう一度登録するだけで大丈夫です。</p>
+        </div>
+        <div class="questions__item">
+          <p class="questions__question">Q. 新規登録後、メールが届きません。</p>
+          <p class="questions__answer">A. 迷惑メールフォルダに届いてしまっている場合がありますので、そちらもご確認ください。<br>
+                他のケースでは、間違った文字が混入してしまって自身のアドレスとは違ったもので新規登録が完了してしまっている場合もありますので、以下の操作で確認できます。<br>
+                <p class="m-4"><b>【 ログインページ＞アカウント有効化メールの再送＞自身のメールアドレスを入力して送信 】</b></p>
+                <p class="m-3 text-center text-primary"><%= link_to "【 確認する 】", resend_confirmation_email_path %></p>
+                既に登録されているメールアドレスなら「アカウント有効化のメールを送信しました」と表示され、リンク付きメールが再送されます。<br>
+                登録されていなければ「メールアドレスは見つかりませんでした」と表示されますので、再度自身のメールアドレスで新規登録してください。</p>
+        </div>
+        <div class="questions__item">
+          <p class="questions__question">Q. 現在のパスワードを忘れてしまって設定が変更できません。</p>
+          <p class="questions__answer">A. 一度ログアウトしていただいて、ログイン画面の下部の<%= link_to '「パスワードを忘れた場合」', new_user_password_path, class: 'text-primary'%>からパスワードの再設定ができます。</p>
+        </div>
+        <div class="questions__item">
+          <p class="questions__question">Q. お問い合わせがしたいのですが。</p>
+          <p class="questions__answer">A. 現在、お問い合わせは登録済みユーザーの方のみとなってますので、アカウント作成後お問い合わせできるようになります。</p>
+        </div>
+        <div class="questions__item">
+          <p class="questions__question">Q. アカウント削除はどこからできますか？</p>
+          <p class="questions__answer">A. アカウントの削除は設定画面の最下部に「アカウント削除」とありますので、そちらから削除できます。</p>
+        </div>
+      </section>
+    </div>
+  </div>
+</main>

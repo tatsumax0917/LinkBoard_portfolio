@@ -1,0 +1,71 @@
+@import 'mixin';
+
+.footer {
+  background: var(--footer-color);
+  color: #fff;
+
+  &__wrapper {
+    width: 90%;
+    margin: 0 auto;
+  }
+  
+  &__logo {
+    font-size: 1.875rem;
+    margin: 40px 0;
+  }
+
+  &-nav {
+    &__title {
+      color: var(--gray-color);
+      font-size: 1.2rem;
+      margin-bottom: 10px;
+    }
+
+    &__list {
+      &:first-of-type {
+        margin-bottom: 40px;
+      }
+    }
+
+  }
+
+  &__copyright {
+    width: 90%;
+    margin: 40px auto;
+    display: block;
+  }
+}
+
+
+// ====================
+//   レスポンシブ
+// ====================
+@include tablet-and-up {
+  .footer {
+    &__wrapper {
+      display: flex;
+      justify-content: space-between;
+    }
+
+    &__logo {
+      font-size: 2.5rem;
+    }
+
+    &-nav {
+      margin: 40px 0;
+      display: flex;
+      justify-content: flex-end;
+      gap: 50px;
+
+      &__title {
+        font-size: 1.5rem;
+        margin-bottom: 20px;
+      }
+    }
+
+    &__copyright {
+      text-align: center;     
+      margin: 40px auto;
+    }
+  }
+}

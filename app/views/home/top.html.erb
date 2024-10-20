@@ -1,0 +1,98 @@
+<main class="main top-page">
+  <section class="hero">
+    <h1 class="catch-phrase">
+    知って欲しい<span class="font-yellow">リンク</span>を<br>
+    <span class="font-blue">サクッ</span>とまとめて<br>
+    全ての活動に<br>
+    <span class="font-yellow">一発アクセス！</span>
+    </h1>
+    <div class="hero__image">
+      <%= image_tag "top_phone_mobile.png" %>
+    </div>
+  </section>
+
+  <div class="top-page__contents">
+    <section class="service" id='service'>
+      <h2 class="service__title title_design">サービス</h2>
+      <p class="service__title-image">SERVICE</p>
+      <p class="service__text">
+        SNSやYoutubeチャンネルなど、知って欲しいリンクを登録して誰でも簡単にアクセス可能にできるサービスです。
+      </p>
+
+      <ul class="service__text">
+        <li>Instagram</li>
+        <li>X</li>
+        <li>Facebook</li>
+        <li>Ticktok</li>
+        <li>など...</li>
+      </ul>
+
+      <p class="service__text">
+        SNSなどにそのURLを載せておくと、
+        アクセスした人は<span class="font-blue">あなたの登録した全てのリンクに一発アクセス可能！</span>
+      </p>
+
+      <p class="service__text">
+      「SNSのプロフィール欄は文字数制限もあるのですべての活動を載せるのは難しい...」<br>
+      そんな時にLinkBoardのマイページのURLさえあれば知ってもらえるチャンスをもっと広げることが出来ます。
+      </p>
+    </section>
+
+    <section class="use-cases" id='use-cases'>
+      <h2 class="use-cases__title">ご利用の例</h2>
+      <p class="use-cases__title-image">USE CASES</p>
+      <div class="target">
+        <div class="target__item">
+          <%= image_tag "target_1.jpg", class: 'target__image' %>
+          <h3 class="target__name">エンジニア</h3>
+          <p class="target__text">スキル<br>実績<br>開発したサービス</p>
+        </div>
+        <div class="target__item">
+          <%= image_tag "target_2.jpg", class: 'target__image' %>
+          <h3 class="target__name">インフルエンサー</h3>
+          <p class="target__text">Instagram<br>Youtubeチャンネル<br>配信ページ<br>グッズ販売ページ</p>
+        </div>
+        <div class="target__item">
+          <%= image_tag "target_3.jpg", class: 'target__image' %>
+          <h3 class="target__name">企業</h3>
+          <p class="target__text">ホームページ<br>採用情報ページ<br>商品情報一覧</p>
+        </div>
+        <div class="target__item">
+          <%= image_tag "target_4.jpg", class: 'target__image' %>
+          <h3 class="target__name">学生</h3>
+          <p class="target__text">ポートフォリオ<br>お気に入りのお店</p>
+        </div>
+      </div>
+    </section>
+  
+    <section class="questions" id='questions'>
+      <h2 class="questions__title">よくあるご質問</h2>
+      <div class="questions__item">
+        <p class="questions__question">Q. 登録・利用に料金はかかりますか？</p>
+        <p class="questions__answer">A. 完全無料で登録利用できますので是非ご活用してください。</p>
+      </div>
+      <div class="questions__item">
+        <p class="questions__question">Q. どういった場面で使うの？</p>
+        <p class="questions__answer">A. SNSのプロフィール欄は文字数制限などがあるのでこのサービスのマイページのURL1つだけ記載すると便利でスッキリしたプロフィールになります。</p>
+      </div>
+      <div class="questions__item">
+        <p class="questions__question">Q. 新規登録後、ログインに失敗しました。</p>
+        <p class="questions__answer">A. 新規登録後はご自身のメールアドレスに届いたメールのリンクを押して本人確認をするとアカウントが有効化されて、ログインできるようになります。</p>
+      </div>
+      <div class="questions__item">
+        <p class="questions__question">Q. 間違ったメールアドレスで新規登録してしまったかもしれない。</p>
+        <p class="questions__answer">A. 一定期間アカウントが有効化されない場合は、数日で自動削除されるので、間違って新規作成したものは放置して、正しいアドレスでもう一度登録するだけで大丈夫です。</p>
+      </div>
+      <div class="read_more">
+        <%= link_to "もっと読む >>", help_path %>
+      </div>
+    </section>
+  </div>
+
+  <section class="start">
+    <%= link_to "無料で始める", new_user_registration_path, class: 'start__btn' %>
+  </section>
+
+</main>
+
+<%= render 'shared/footer' %>

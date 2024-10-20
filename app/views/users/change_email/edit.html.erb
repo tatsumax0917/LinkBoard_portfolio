@@ -1,0 +1,18 @@
+<main class="main change_email">
+  <div class="row">
+    <div class="col-11 col-md-8 mx-auto">
+      <%= simple_form_for(@user, url: change_email_path, html: { method: :put,  }) do |f| %>
+
+        <div class="field">
+          <%= f.input :email, label: '新しいメールアドレス', wrapper: :floating_labels_form, placeholder: '', input_html: { value: '' } %>
+        </div>
+        <div class="field edit-auth">
+          <%= f.input :current_password, label: '現在のパスワード', wrapper: :floating_labels_form, placeholder: '' %>
+        </div> 
+        <div class="actions">
+          <%= f.submit "メールアドレスを変更", class: 'form-control btn btn-primary' %>
+        </div>
+      <% end %>
+    </div>
+  </div>
+</main>

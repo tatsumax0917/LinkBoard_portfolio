@@ -1,0 +1,37 @@
+
+<% if @resource.confirmed_at.nil? %>
+<!-- 新規登録時のメール -->
+<p>下記をクリックするとアカウントが有効化されて、<br>ログインできるようになります。</p>
+
+<%= link_to 'アカウントを有効化する', confirmation_url(@resource, confirmation_token: @token, action_type: 'signup'),
+  style: '
+    color: #ffff;
+    text-decoration: none;
+    text-align: center;
+    font-weight: bold;
+    border-radius: 10px;
+    background: #3c64ff;
+    padding: 10px 50px;
+    display: inline-block;
+    margin-top: 20px;
+  ' %>
+
+<% else %>
+  <!-- メールアドレス変更時のメール -->
+
+  <p>下記をクリックするとメールアドレスの変更が完了します。</p>
+
+    <%= link_to 'メールアドレスの変更を完了する', user_confirmation_url(confirmation_token: @token, action_type: 'change_email'),
+  style: '
+    color: #ffff;
+    text-decoration: none;
+    text-align: center;
+    font-weight: bold;
+    border-radius: 10px;
+    background: #3c64ff;
+    padding: 10px 50px;
+    display: inline-block;
+    margin-top: 20px;
+  ' %>
+
+<% end %>

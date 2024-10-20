@@ -1,0 +1,255 @@
+// ==============================
+//   hom#top, home#help
+// ==============================
+.top-page, .help {
+    text-align: left;
+    // =====　ヒーロー　=====
+    .hero {
+      width: 90%;
+      margin: 0 auto 100px;
+      
+      .catch-phrase {
+        color: var(--gray-color);
+        font-size: 1.875rem;
+        font-weight: bold;
+        margin-left: 20px;
+        margin-bottom: 30px;
+      }
+      &__image {
+        width: 100%;
+      }
+    }
+    &__contents {
+      width: 90%;
+      margin: 0 auto;
+      // =====　サービス　=====
+      .service {
+        position: relative;
+        width: 90%;
+        margin: 0 auto 120px;
+        &__title {
+          font-weight: bold;
+          margin-bottom: 30px;
+          z-index: 1;
+          position: relative;
+        }
+        &__text {
+          margin-bottom: 40px;
+        }
+        &__title-image {
+          position: absolute;
+          top: -40px;
+          left: 15px;
+          font-size: 3rem;
+          color: #f5f5f5;
+          font-weight: bold;
+          z-index: 0;
+          user-select: none;
+        }
+      }
+      
+      // =====　ご利用例　=====
+      .use-cases {
+        width: 90%;
+        margin: 0 auto 100px;
+        position: relative;
+
+        &__title {
+          font-weight: bold;
+          border-left: solid 8px var(--yellow-color);
+          padding-left: 10px;
+          margin-bottom: 30px;
+          z-index: 1;
+          position: relative;
+        }
+        &__title-image{
+          position: absolute;
+          top: -40px;
+          left: 15px;
+          font-size: 3rem;
+          color: #f5f5f5;
+          font-weight: bold;
+          z-index: 0;
+          user-select: none;
+        }
+        .target {
+          display: flex;
+          flex-wrap: wrap;
+          justify-content: space-between;
+          gap: 20px;
+          &__item {
+            text-align: center;
+            width: calc(50% - 10px);
+            margin-bottom: 30px;
+          }
+          &__image {
+            border-radius: 20px;
+          }
+          &__name {
+            margin: 5px 0;
+            font-weight: bold;
+          }
+          &__text {
+            font-size: 0.875rem;
+          }
+        }
+      }
+    }
+
+    // =====　よくある質問　=====
+    .questions {
+      background-color: #F0F0F0;
+      margin: 0 auto;
+      width: 90%;
+      padding: 50px 30px;
+      
+      border-radius: 20px;
+      &__title {
+        font-weight: bold;
+        font-size: 1.25rem;
+        margin-bottom: 50px;
+        color: var(--gray-color);
+      }
+      &__item {
+        border-top: solid 1px  #000;
+        padding: 30px 0;
+        &:last-of-type {
+          border-bottom: solid 1px #000;
+        }
+      }
+      &__question {
+        margin-bottom: 20px;
+        font-weight: bold;
+      }
+      & .read_more {
+        text-align: right;
+        color: var(--blue-link-color);
+      }
+    }
+    
+    // =====　無料で始める　=====
+    & .start {
+      width: 50%;
+      margin: 150px  auto;
+      background-color: var(--yellow-color);
+      border-radius: 10px;
+      text-align: center;
+      &__btn {
+        display: block;
+        color: #fff;
+        font-weight: bold;
+        height: 100%;
+        padding: 20px;
+        width: 100%;
+      }
+    }
+
+  }
+
+  // ====================
+  //   レスポンシブ
+  // ====================
+  @include tablet-and-up {
+    // ヒーロー
+    .top-page {
+      .hero {
+        display: flex;
+        flex-direction: row-reverse;
+        justify-content: space-between;
+        align-items: center;
+        .catch-phrase {
+          // font-size: 1.5rem;
+          font-size: calc(1rem + 1.5vw);
+          width: 100%;
+          margin-left: 14px;
+        }
+        &__image {
+          max-width: 400px;
+        }
+      }
+      // =====　サービス　=====
+      .service {
+        &__title-image {
+          top: -45px;
+          left: 15px;
+          font-size: 3.5rem;
+        }
+      }
+    
+      // =====　ご利用例　=====
+      .use-cases {
+        &__title-image{
+          top: -45px;
+          left: 15px;
+          font-size: 3.5rem;
+        }
+      }
+    }
+  }
+
+  @include desktop-and-up {
+    .top-page {
+      .hero {
+        justify-content: center;
+        .catch-phrase {
+          width: 50%;
+          margin-left: 50px;
+          text-align: center;
+        }
+        &__image {
+          max-width: 400px;
+        }
+      }
+      
+      &__contents {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        gap: 50px;
+
+        // =====　サービス　=====
+        .service {
+          flex: 1 1 calc(50% - 25px);
+          box-sizing: border-box;
+          max-width: 700px;
+          &__title {
+            margin-bottom: 70px;
+          }
+          &__title-image {
+            top: -55px;
+            left: 20px;
+            font-size: 4rem;
+          }
+        }
+        
+        // =====　ご利用例　=====
+        .use-cases {
+          flex: 1 1 calc(50% - 25px);
+          box-sizing: border-box;
+          max-width: 700px;
+
+          &__title {
+            margin-bottom: 70px;
+          }
+          &__title-image{
+            top: -55px;
+            left: 20px;
+            font-size: 4rem;
+          }
+          .target {
+            justify-content: flex-start;
+            &__item {
+              max-width: 300px;
+            }
+          }
+        }
+
+      }
+      // ===== よくある質問 =====
+      .questions {
+        flex: 1 1 100%;
+        box-sizing: border-box;
+        padding: 80px;
+      }
+    }
+  }

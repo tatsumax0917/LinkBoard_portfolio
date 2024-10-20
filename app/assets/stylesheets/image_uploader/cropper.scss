@@ -1,0 +1,15 @@
+.cropper-container {
+  margin: 0 auto;
+}
+
+#image-modal {
+  padding: 20px !important;
+  min-width: 300px !important;
+  max-width: 100vw !important; 
+  max-height: 100vh !important;
+  overflow: hidden !important; 
+}
+
+.modal-content {
+  min-width: 300px;
+}

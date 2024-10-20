@@ -1,0 +1,32 @@
+$breakpoint-tablet: 600px;
+$breakpoint-desktop: 900px;
+
+@mixin tablet-and-up {
+  @media (min-width: $breakpoint-tablet) {
+    @content;
+  }
+}
+
+@mixin desktop-and-up {
+  @media (min-width: $breakpoint-desktop) {
+    @content;
+  }
+}
+
+@mixin form-responsive {
+  max-width: 550px;
+  margin: 0 auto;
+  @content;
+}
+
+@mixin yellow_custom_btn {
+  display: block;
+  width: 100%;
+  background-color: var(--yellow-color);
+  color: #fff;
+  padding: 10px;
+  border-radius: 10px;
+  text-align: center;
+  font-weight: bold;
+  @content;
+}

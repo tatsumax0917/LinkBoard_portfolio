@@ -1,0 +1,19 @@
+<p><strong>名前:</strong> <%= @contact.name %></p>
+<p><strong>メールアドレス:</strong> <%= @contact.email %></p>
+<p><strong>メッセージ:</strong></p>
+<p><%= @contact.message %></p>
+ 
+ <p><a href="mailto:brandonfarmer75@outlook.com">
+ <%= link_to 'お問合せに返信する', "mailto:#{@contact.email}",
+  style: '
+    color: #ffff;
+    text-decoration: none;
+    text-align: center;
+    font-weight: bold;
+    border-radius: 10px;
+    background: #3c64ff;
+    padding: 10px 50px;
+    display: inline-block;
+    margin-top: 20px;
+  ' %>
+ </p>

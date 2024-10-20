@@ -1,0 +1,50 @@
+<main class="main search">
+<div class="row">
+  <div class="col-11 col-md-8 mx-auto">
+   <div class="search__search-box">
+    <%= form_with(url: users_path, method: :get, role: 'search', html: { class: 'menu__search-box' }) do %>
+        <%= text_field_tag :search_text, params[:search_text], id: 'search-text', class: 'menu__search-text', type: 'search', value: params[:search_text], placeholder: 'ユーザー検索' %>
+        <button type="submit" class="menu__search-btn">
+          <i class="bi bi-search"></i>
+        </button>
+      <% end %>
+    </div>
+    <ul class="search__list">
+    <% unless flash[:alert].present? %>
+      <% if @users.any? %>
+        <% @users.each do |user| %>
+          <li class="search__item">
+            <%= link_to user_profile_path(user.unique_user_id), class: 'search__user-link' do %>
+              <% if user.image.attached? %>
+                <%= image_tag user.resized_image, class: 'search__user-image' %>
+              <% else %>
+                <%= image_tag 'default_profile.png', class: 'search__user-image' %>
+              <% end %>
+              <div class="search__user-info">
+                <span class="search__user-name">
+                  <%= user.name %>
+                  <% if user.unique_user_id == 'linkboard' %>
+                    <i class="admin-badge bi bi-shield-check"></i>
+                  <% end %>
+                </span>
+                <span class="search__user-unique-user-id">ID: <%= user.unique_user_id %></span>
+                <p class="search__user-text"><%= user.text %></p>
+              </div>
+            <% end %>
+          </li>
+        <% end %>
+      <% else %>
+        <ul class="search__list">
+          <li class="search__item">該当するユーザーが見つかりませんでした</li>
+        </ul>
+      <% end %>
+      
+    <% else %>
+      <%= flash[:alert] %>  
+    <% end %>
+    </ul>
+
+    <%= paginate @users %>
+
+  </div>
+</main>

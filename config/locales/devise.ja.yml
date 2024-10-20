@@ -1,0 +1,53 @@
+ja:
+  devise:
+    confirmations:
+      confirmed: "アカウントの確認が完了しました。"
+      send_instructions: "アカウント有効化のメールを送信しましたので確認してください。"
+      already_confirmed: 'このアカウントは既にアカウントの有効化が完了しています。'
+      link_expired: '認証リンクの有効期限が切れているので、再送されたメールからアカウントの有効化をしてください。'
+    failure:
+      already_authenticated: "すでにログインしています。"
+      inactive: "アカウントが有効ではありません。"
+      invalid: "IDかパスワードが間違っています。"
+      locked: "アカウントがロックされています。"
+      not_found_in_database: "IDかパスワードが間違っています。"
+      timeout: "セッションがタイムアウトしました。再度ログインしてください。"
+      unauthenticated: "ログインしてください。"
+      unconfirmed: "メールを確認してアカウントを有効化してログインしてください。"
+    mailer:
+      confirmation_instructions: {
+        subject: "アカウントの確認",
+        greet: "こんにちは、",
+        action: "アカウントの確認を行うには以下のリンクをクリックしてください。"
+      }
+      reset_password_instructions: {
+        subject: "【LinkBoard】 パスワードの再設定",
+        greet: "こんにちは、",
+        action: "パスワードをリセットするには以下のリンクをクリックしてください。"
+      }
+      unlock_instructions: {
+        subject: "アカウントのロック解除",
+        greet: "こんにちは、",
+        action: "アカウントのロックを解除するには以下のリンクをクリックしてください。"
+      }
+    passwords:
+      no_token: "パスワード再設定用のリンクの有効期限が切れています。"
+      send_instructions: "パスワード再設定用のメールを送信しました。"
+      updated: "パスワードが変更されました。"
+      updated_not_active: "パスワードが変更されましたが、アカウントは有効ではありません。"
+    registrations:
+      signed_up: "アカウント登録が完了しました。"
+      signed_up_but_inactive: "アカウント登録が完了しましたが、有効ではありません。"
+      signed_up_but_locked: "アカウント登録が完了しましたが、アカウントがロックされています。"
+      signed_up_but_unconfirmed: "アカウント登録が完了しました。確認メールを確認してください。"
+      update_needs_confirmation: "change mail"
+      updated: "アカウント情報が更新されました。"
+      destroyed: "アカウントを削除しました。"
+    sessions:
+      signed_in: "ログインしました。"
+      signed_out: "ログアウトしました。"
+    sessions:
+      user:
+        new:
+          remember_me: "ログインを記憶する"
+    

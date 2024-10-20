@@ -1,0 +1,24 @@
+<main class="main contact">
+
+<div class="row">
+  <div class="col-11 col-md-8 mx-auto">
+    <%= render 'shared/flash', attribute: 'contact__flash'%>
+
+    <h2 class="contact__title main__heading">お問合せフォーム</h2>
+    <%= simple_form_for(@contact, url: contact_path, html: { method: :post, data: { turbo_confirm: "この内容で送信してもいいですか？" } }) do |f| %>
+      <div class="field">
+        <%= f.input :name, wrapper: :floating_labels_form, placeholder: '', value: @contact.name %>
+      </div>
+      <div class="field">
+        <%= f.input :email, wrapper: :floating_labels_form, placeholder: '', error: false, value: @contact.email %>
+        <%= render 'shared/custom_form_error', object: @contact, attribute: :email %>
+      </div>
+      <div class="field">
+        <%= f.input :message, as: :text, wrapper: :floating_labels_form, placeholder: '' %>
+      </div>
+      <div class="actions">
+        <%= f.submit "送信", class: 'form-control btn btn-primary' %>
+      </div>
+    <% end %>
+  </div>
+</main>

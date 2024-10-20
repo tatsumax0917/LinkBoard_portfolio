@@ -1,0 +1,39 @@
+<main class="main sign-up">
+
+<div class="row">
+  <div class="col-11 col-md-8 mx-auto">
+    <h2 class="sign-up__title main__heading">新規登録</h2>
+
+    <%= simple_form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
+      <div class="field">
+        <%= f.input :unique_user_id, error: false, wrapper: :floating_labels_form, placeholder: '' %>
+        <% if resource.errors[:unique_user_id].present? %>
+          <p class="custom_error">ID<%= resource.errors[:unique_user_id][0] %></p>
+        <% end %>
+      </div>
+
+      <div class="field">
+        <%= f.input :name, wrapper: :floating_labels_form, placeholder: '' %>
+      </div>
+
+      <div class="field">
+        <%= f.input :email, wrapper: :floating_labels_form, placeholder: '' %>
+      </div>
+
+      <div class="field">
+        <%= f.input :password, wrapper: :floating_labels_form, placeholder: '' %>
+      </div>
+      
+      <div class="field">
+        <%= f.input :password_confirmation, wrapper: :floating_labels_form, placeholder: '' %>
+      </div>
+
+      <div class="actions">
+        <%= f.button :submit, 'アカウント作成', class: 'form-control btn btn-primary' %>
+      </div>
+    <% end %>
+    <p class="mail_cation">※ アカウント作成後にアカウント有効化をするリンク付きメールが届きますが、迷惑メールフォルダに振り分けられる可能性もありますのでそちらもご確認ください。</p>
+
+    </div>
+  </div>
+</main>

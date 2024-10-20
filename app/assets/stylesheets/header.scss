@@ -1,0 +1,194 @@
+@import 'mixin';
+
+// ヘッダー
+.header {
+  height: 50px;
+  background-color: var(--header-color);
+  position: fixed;
+  width: 100%;
+  left: 0;
+  z-index: 10;
+
+  &__wrapper {
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 3%;
+  }
+
+  &__logo {
+    color: #fff;
+    font-weight: bold;
+  }
+
+  &__mask--cover {
+    width: 100%;
+    height: 100vh;
+    background-color: #000;
+    opacity: 0.5;    
+    position: fixed; 
+    z-index: 0;
+    left: 0;
+    top: 50px;
+  }
+}
+
+/* ハンバーガーメニュー */
+.hamburger {
+  /* reset */
+  all: unset; 
+  display: inline-block;
+  cursor: pointer;
+  /* style */
+  width: 50px;
+  height: 50px;
+  position: relative; /* 相対位置指定 */
+
+  &__icon {
+    display: block;
+    width: 30px;
+    height: 2px; /* 中央のバーの高さ */
+    background-color: #fff;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); 
+  }
+
+  &__icon::before,
+  &__icon::after {
+    content: '';
+    display: block;
+    width: 30px;
+    height: 2px;
+    background-color: #fff;
+    position: absolute;
+    left: 0;
+    transition: 0.2s ease-out;
+  }
+  
+  &__icon::before {
+    top: -10px; /* 中央のバーからの相対位置 */
+  }
+
+  &__icon::after {
+    top: 10px; /* 中央のバーからの相対位置 */
+  }
+
+  &__icon--close {
+    visibility: hidden; /* 表示を非表示にする */
+  }
+
+  &__icon--close::before {
+    transform: rotate(45deg) translate(7px, 7px);
+    transition: 0.2s ease-out;
+    visibility: visible;
+  }
+
+  &__icon--close::after {
+    transform: rotate(-45deg) translate(7px, -7px);
+    transition: 0.2s ease-out;
+    visibility: visible;
+  }
+}
+
+/* メニュー */
+.menu__desktop { display: none; }
+.menu {
+  background-color: var(--header-color);
+  color: #fff;
+  width: 250px;
+  height: 100vh;
+  position: absolute;
+  right: -250px;
+  top: 50px;
+  transition: 0.2s ease-out;
+  
+
+  &__user-name {
+    text-align: center;
+    padding: 30px 0;
+    font-weight: bold;
+  }
+
+  &--open {
+    position: absolute;
+    right: 0px;
+  }
+  
+  &__link {
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  &__item {
+    font-weight: bold;
+    padding: 20px 30px;
+  }
+
+  // 検索窓
+  &__search-box {
+    position: relative;
+  }
+  &__search-text{
+    width: 100%;
+    height: 30px;
+    text-align: left;
+    padding:0 25px 0 15px;
+    color: #000;
+    outline: none;
+    border: 1px solid var(--light-gray-color);
+    border-radius: 30px;
+    font-size: 0.875rem;
+    font-weight: normal;
+    
+    &::placeholder {
+      color: var(--light-gray-color);
+    }
+  }
+  
+  &__search-btn {
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding-right: 10px;
+    padding-top: 3px;
+    border: none;
+    background-color: transparent;
+    color: var(--light-gray-color);
+    outline: none;
+  }
+}
+
+
+
+// ========================
+//   レスポンシブ
+// ========================
+@include desktop-and-up {
+  .header {
+    .menu__desktop { display: block; }
+    .hamburger { display: none;}
+    &__wrapper {
+      margin: 0 auto;
+    }
+    .menu {
+      &__desktop {
+        color: white;
+
+        .menu__list--desktop {
+          display: flex;
+
+          .menu__item--desktop {
+            padding-left: 30px;
+
+            .bi-chevron-right {
+              display: none;
+            }
+          }
+        }
+      }
+    }
+  }
+}

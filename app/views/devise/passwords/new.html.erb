@@ -1,0 +1,17 @@
+<main class="main forget_password">
+  <div class="row">
+    <div class="col-11 col-md-8 mx-auto">
+      <%= simple_form_for(resource, as: resource_name, url: password_path(resource_name), html: { method: :post }) do |f| %>
+
+        <div class="field">
+          <%= f.input :email, wrapper: :floating_labels_form, placeholder: '', value: (resource.pending_reconfirmation? ? resource.unconfirmed_email : resource.email) %>
+        </div>
+
+        <div class="actions">
+          <%= f.submit "パスワードを再設定する", class: 'form-control btn btn-primary' %>
+        </div>
+      <% end %>
+      <p class="mail_cation">※ 再設定用のメールが届きますが、迷惑メールフォルダに振り分けられる可能性もありますのでそちらもご確認ください。</p>
+    </div>
+  </div>
+</main>

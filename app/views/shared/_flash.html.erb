@@ -1,0 +1,13 @@
+<div class="custom_flash">
+  <% if flash[:notice] %>
+  <div class="#{attribute} text-success alert alert-notice" id="notice_explanation">
+    <%= flash[:notice] %>
+  </div>
+  <% end %>
+
+  <% if flash[:alert] %>
+    <div class="#{attribute} text-danger alert alert-alert" id="alert_explanation">
+      <%= flash[:alert] %>
+    </div>
+  <% end %>
+</div>

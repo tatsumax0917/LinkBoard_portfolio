@@ -1,0 +1,44 @@
+// // ========================================
+// //  Floation Label
+// //  How to use: 
+// // 適用したいinputタグに.floation-input
+// // 適用したいlabelタグに.floation-label
+// // ========================================
+
+// .parent-input {
+//   position: relative;
+
+//   .floating-input{
+//     padding: 10px;
+//   }
+
+//   .floating-label {
+//     position: absolute;
+//     top: -0.65rem;
+//     left: 0.75rem;
+//     font-size: 0.8rem;
+//     transition: all 0.2s ease;
+//     pointer-events: none;
+//     background: white;
+//     color: rgb(75, 75, 75);
+//   }
+// }
+
+// .floating-input:focus + .floating-label,
+// .floating-input:not(:placeholder-shown) + label
+// {
+//   top: -0.6rem;
+//   left: 0.75rem;
+//   font-size: 0.75rem;
+// }
+
+// .field_with_errors {
+//   .floating-input {
+//     border: solid 1px red;
+//   }
+
+//   .floating-label {
+//     color: red;
+//   }
+
+// }

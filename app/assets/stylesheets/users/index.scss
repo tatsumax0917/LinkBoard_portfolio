@@ -1,0 +1,73 @@
+.search {
+  &__search-box {
+    padding-top: 50px;
+  }
+
+  &__list {
+    margin-top: 50px;
+    margin-bottom: 50px;
+  }
+  
+  &__item {
+    margin: 30px;
+  }
+  
+  &__user-link {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  
+  &__user-image {
+    width: 20%;
+    min-width: 80px;
+    max-width: 100px;
+    border-radius: 50%;
+  }
+
+  &__user-info {
+    width: 65%;
+    margin-left: 10px;
+    font-size: 0.875rem;
+    padding: 5px 0;
+  }
+  
+  &__user-name {
+    display: block;
+  }
+  
+  &__user-unique-user-id {
+    display: block;
+    color: var(--light-gray-color);
+  }
+
+  &__user-text {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    margin-top: 10px;
+  }
+  .pagination {
+    display: flex;
+    justify-content: center;
+  }
+}
+// ====================
+//   レスポンシブ
+// ====================
+@include tablet-and-up {
+  .search {
+    &__search-box {
+      @include form-responsive;
+    }
+    & .field {
+      @include form-responsive;
+    }
+    &__list {
+      @include form-responsive;
+      margin-top: 50px;
+      margin-bottom: 50px;
+
+    }
+  }
+}
